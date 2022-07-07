@@ -1,19 +1,10 @@
 /** @jsx h */
-import { h } from "preact";
-import Counter from "../islands/Counter.tsx";
+import { h } from "preact"
 
-export default function Home() {
+export default function index() {
   return (
     <div>
-      <img
-        src="/logo.svg"
-        height="100px"
-        alt="the fresh logo: a sliced lemon dripping with juice"
-      />
-      <p>
-        Welcome to `fresh` course by Bitfumes.
-      </p>
-      <Counter start={3} />
+        <h1>Welcome to Bitfumes' Fresh Course</h1>
     </div>
-  );
+  )
 }
