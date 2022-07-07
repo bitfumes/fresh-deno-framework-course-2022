@@ -7,7 +7,7 @@ export default function layouts({children}:any) {
         <nav>
             <a href="/">Home</a>
             <a href="/about">About</a>
-            <a href="/users/2">User2</a>
+            <a href="/users/github">Search Github Users</a>
         </nav>
         {children}
     </div>
