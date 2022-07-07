@@ -1,12 +1,27 @@
 /** @jsx h */
 import {h} from "preact"
-import {PageProps}  from "$fresh/server.ts"
+import {PageProps, Handlers}  from "$fresh/server.ts"
 import Layout from '../../components/layouts.tsx';
 
-export default function User({params}:PageProps) {
+export const handler: Handlers = {
+  async GET(_,ctx){
+    // fetch users from db
+    const users = [
+      {name:"Sarthak"},
+      {name:"Anki"},
+    ]
+    return await ctx.render(users);
+  }
+}
+
+
+export default function User({params,data}:PageProps) {
+
   return (
     <Layout>
-    <div>{params.id}</div>
+      {
+        data.map((user:any) => <p>{user.name}</p>)
+      }
     </Layout>
   )
 }
